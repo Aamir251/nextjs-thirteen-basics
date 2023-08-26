@@ -1,16 +1,18 @@
-type User = {
-    id: number;
-    name: string;
-    username: string;
-    email: string;
-    address: {
-        street: string;
-        suite: string;
-        city: string;
-        zipcode: string;
-        geo: {
-            lat: string;
-            lng: string;
-        };
-    };
+type Result = {
+    pageid : number,
+    ns : number,
+    title : string,
+    extract : string,
+    index : number,
+    thumbnail? : {
+        source : string,
+        width : number,
+        height : number
+    }
+}
+
+type SearchResult = {
+    query? : {
+        pages? : Result[]
+    }
 }
